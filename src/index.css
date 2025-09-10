@@ -8,39 +8,42 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 99%;
-    --foreground: 220 15% 20%;
+    --background: 150 30% 97%;
+    --foreground: 160 15% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 220 15% 20%;
+    --card-foreground: 160 15% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 220 15% 20%;
+    --popover-foreground: 160 15% 15%;
 
-    --primary: 210 100% 45%;
+    --primary: 150 75% 35%;
     --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 30% 97%;
-    --secondary-foreground: 220 15% 25%;
+    --secondary: 150 20% 95%;
+    --secondary-foreground: 160 15% 25%;
 
-    --muted: 210 25% 95%;
-    --muted-foreground: 220 10% 50%;
+    --muted: 150 15% 94%;
+    --muted-foreground: 160 10% 45%;
 
-    --accent: 210 100% 95%;
-    --accent-foreground: 210 100% 35%;
+    --accent: 120 60% 50%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 210 20% 90%;
-    --input: 210 20% 90%;
-    --ring: 210 100% 45%;
+    --border: 150 20% 88%;
+    --input: 150 20% 90%;
+    --ring: 150 75% 35%;
 
-    /* Custom design tokens for Saylani */
-    --hero-gradient: linear-gradient(135deg, hsl(210 100% 45%), hsl(220 80% 55%));
-    --text-gradient: linear-gradient(135deg, hsl(210 100% 35%), hsl(220 80% 45%));
-    --shadow-soft: 0 4px 20px -4px hsl(210 50% 80%);
-    --shadow-glow: 0 0 30px hsl(210 100% 45% / 0.3);
+    /* Professional green design tokens */
+    --hero-gradient: linear-gradient(135deg, hsl(150 75% 35%), hsl(120 60% 40%));
+    --background-gradient: linear-gradient(180deg, hsl(150 30% 97%), hsl(150 25% 95%));
+    --text-gradient: linear-gradient(135deg, hsl(150 75% 30%), hsl(120 60% 35%));
+    --card-gradient: linear-gradient(145deg, hsl(0 0% 100%), hsl(150 10% 98%));
+    --shadow-professional: 0 8px 32px -8px hsl(150 50% 70% / 0.3);
+    --shadow-glow: 0 0 40px hsl(150 75% 35% / 0.2);
+    --accent-gradient: linear-gradient(135deg, hsl(120 60% 50%), hsl(140 70% 45%));
 
     --radius: 0.5rem;
 
@@ -116,17 +119,43 @@ All colors MUST be HSL.
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-weight: 600;
   }
   
   .hero-gradient {
     background: var(--hero-gradient);
   }
   
-  .shadow-soft {
-    box-shadow: var(--shadow-soft);
+  .background-gradient {
+    background: var(--background-gradient);
+  }
+  
+  .card-gradient {
+    background: var(--card-gradient);
+  }
+  
+  .accent-gradient {
+    background: var(--accent-gradient);
+  }
+  
+  .shadow-professional {
+    box-shadow: var(--shadow-professional);
   }
   
   .shadow-glow {
     box-shadow: var(--shadow-glow);
+  }
+  
+  .professional-card {
+    @apply bg-card border border-border/50 rounded-xl shadow-professional hover:shadow-glow transition-all duration-500;
+    background: var(--card-gradient);
+  }
+  
+  .fade-in {
+    @apply animate-fade-in;
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-glow;
   }
 }
