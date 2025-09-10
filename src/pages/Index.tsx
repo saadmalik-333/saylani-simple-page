@@ -11,10 +11,21 @@ const Index = () => {
               <h1 className="text-3xl font-bold gradient-text">Saylani Mass IT Training</h1>
               <p className="text-sm text-muted-foreground font-medium">Empowering Digital Futures Since 1999</p>
             </div>
-            <div className="hidden md:flex items-center space-x-6">
-              <div className="text-sm text-muted-foreground">
+            <div className="flex items-center space-x-6">
+              <div className="hidden md:block text-sm text-muted-foreground">
                 Excellence in IT Education
               </div>
+              <a 
+                href="https://smit-idmaker.netlify.app" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="professional-card px-6 py-3 hover-lift transition-all duration-300 group"
+              >
+                <div className="flex items-center space-x-2">
+                  <span className="gradient-text font-semibold">ID Maker</span>
+                  <span className="text-primary group-hover:translate-x-1 transition-transform duration-300">→</span>
+                </div>
+              </a>
             </div>
           </div>
         </div>
